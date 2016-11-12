@@ -31,7 +31,9 @@
                 <h1 class="templatemo-site-title">
                     <a href="#">Прогноз погоды</a>
                 </h1>
-                
+                <h3 class="templatemo-site-title">
+                    <a href="#" id="city"><span class="blue">Казань</span><span class="green"></span></a>
+                </h3>
             </div>
 
             <div class="image-section">
@@ -220,21 +222,43 @@
                         <section id="contact-section" class="inactive">
                             <div class="row">
                                 <div class="black-bg col-sm-12 col-md-12 col-lg-12">
-                                    <h2 class="text-center">Выбор города</h2>
-                                    
-                                    
+                                    <h2 class="text-center">Выбор города</h2>                                  
                                     
                                     <div class="clearfix"></div>
                                 </div>
                             </div>
                             <div class="row margin-top-20">
-                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6  pull-right">
-                                    <a href="#menu" class="change-section">
+                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6  pull-center">
+                                    
+                                    <a href="#menu" class="change-section" onclick=setCity('Москва')>
                                         <div class="black-bg btn-menu">
-                                            <h2>Назад</h2>
+                                            <h2>Москва</h2>
+                                        </div>
+                                        
+                                    </a>
+                                </div>
+                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6  pull-center">
+                                    <a href="#menu" class="change-section" onclick=setCity('Казань')>
+                                        <div class="black-bg btn-menu">
+                                            <h2>Казань</h2>
                                         </div>
                                     </a>
                                 </div>
+                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6  pull-center">
+                                    <a href="#menu" class="change-section" onclick=setCity('Чебоксары')>
+                                        <div class="black-bg btn-menu">
+                                            <h2>Чебоксары</h2>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6  pull-center">
+                                    <a href="#menu" class="change-section" onclick=setCity('Вурнары')>
+                                        <div class="black-bg btn-menu">
+                                            <h2>Вурнары</h2>
+                                        </div>
+                                    </a>
+                                </div>
+
                             </div>
                         </section><!-- /.contact-section -->    
                         
@@ -260,6 +284,13 @@
         <script src="js/jquery-ui.min.js"></script>
         <script src="js/jquery.backstretch.min.js"></script>
         <script src="js/templatemo_script.js"></script>
+
+        <script type="text/javascript">
+        function setCity(city_name) 
+        {
+            document.getElementById('city').innerHTML = '<h3 class="templatemo-site-title"> ' + '<a href="#" id="city"><span class="blue">' + city_name + '</span><span class="green"></span></a></h3>';
+        }
+        </script>
 
     </body> 
 </html>
